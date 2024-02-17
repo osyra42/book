@@ -8,8 +8,11 @@ function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
 
+
+
+
 function loadChapter(fileName) {
-    var mainDiv = document.getElementById("main");
+    var mainDiv = document.getElementById("mainContent");
 
     // Fetch the content of the specified file
     fetch(fileName)
