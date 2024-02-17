@@ -7,30 +7,23 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <!-- Side panel toggle button -->
-    <button onclick="toggleSidePanel()">Toggle Panel</button>
 
     <!-- Side panel -->
-    <div id="sidePanel" class="sidePanel">
-        <ul>
-            <li><a href="#chapter1">Chapter 1</a></li>
-            <li><a href="#chapter2">Chapter 2</a></li>
-            <!-- Add more chapters as needed -->
-        </ul>
-    </div>
+    <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Prologue</a>
+  <!-- Anchor links to activate the function -->
+    <a href="#" onclick="loadChapter('chapter/01.html')">Load Chapter 1</a>
+    <a href="#" onclick="loadChapter('chapter-02.txt')">Load Chapter 2</a>
+  <a href="#">Chapter 03</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button>
+<h2>Collapsed Sidepanel</h2>
+<p>Content...</p>
 
     <!-- Main content -->
     <div id="mainContent">
-        <!-- Chapters content -->
-        <div id="chapter1">
-            <h2>Chapter 1</h2>
-            <p>This is the content of Chapter 1.</p>
-        </div>
-        <div id="chapter2">
-            <h2>Chapter 2</h2>
-            <p>This is the content of Chapter 2.</p>
-        </div>
-        <!-- Add more chapters as needed -->
     </div>
 
     <script src="script.js"></script>
