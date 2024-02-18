@@ -12,20 +12,21 @@ function closeNav() {
 
 
 function loadChapter(fileName) {
-    var mainDiv = document.getElementById("mainContent");
+  var mainDiv = document.getElementById("mainContent");
 
-    // Fetch the content of the specified file
-    fetch(fileName)
-        .then(response => response.text())
-        .then(text => {
-            // Create a <pre> element
-            var preElement = document.createElement("pre");
-            // Set the content of the <pre> element to the text content of the file
-            preElement.textContent = text;
-            // Clear existing content in the #main div
-            mainDiv.innerHTML = '';
-            // Append the <pre> element to the #main div
-            mainDiv.appendChild(preElement);
-        })
-        .catch(error => console.error('Error fetching chapter:', error));
+  // Fetch the content of the specified file
+  fetch(`chapter/${fileName}`)
+    .then(response => response.text())
+    .then(text => {
+      // Create a <pre> element
+      var preElement = document.createElement("pre");
+      // Set the content of the <pre> element to the text content of the file
+      preElement.textContent = text;
+      // Clear existing content in the #main div
+      mainDiv.innerHTML = '';
+      // Append the <pre> element to the #main div
+      mainDiv.appendChild(preElement);
+    })
+    .catch(error => console.error('Error fetching chapter:', error));
+  closeNav();
 }
